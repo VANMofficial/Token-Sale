@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "./VANM_Token.sol";
+import "./VANMToken.sol";
 
 
 contract VANMPresale is Ownable {
@@ -33,7 +33,7 @@ contract VANMPresale is Ownable {
         _;
     }
 
-    //msg.sender has to be whitelisted
+    //Recipient has to be whitelisted
     modifier isWhitelisted(address _to) {
         require(whitelist[_to]);
         _;
@@ -49,13 +49,13 @@ contract VANMPresale is Ownable {
     //Constructor
     constructor() public {
 
-        // 17.11.2018 00:00 UTC
+        //17.11.2018 00:00 UTC
         presaleStartsAt = 1542412800;
 
-        // 31.12.2018 00:00 UTC
+        //31.12.2018 00:00 UTC
         presaleEndsAt = 1546214400;
 
-        //Amount of token for 1 ETH
+        //Amount of token per wei
         presaleRate = 2600;
 
         //Amount of raised Funds in wei
