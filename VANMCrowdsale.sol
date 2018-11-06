@@ -60,7 +60,7 @@ contract VANMCrowdsale is Ownable {
         //Wallet for raised crowdsale funds
         crowdsaleWallet = 0xedaFdA45fedcCE4D2b81e173F1D2F21557E97aA5;
 
-        //TST token address
+        //VANM token address
         tokenAddress = 0x0d155aaa5C94086bCe0Ad0167EE4D55185F02943;
         token = VANMToken(tokenAddress);
     }
